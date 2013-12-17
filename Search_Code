@@ -1,3 +1,29 @@
+using Lucene.Net.Search;
+using Sitecore.Configuration;
+using Sitecore.Data;
+using Sitecore.Data.Fields;
+using Sitecore.Data.Items;
+using Sitecore.Search;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+
+namespace IntranetSearch
+{
+   public partial class BasicSearch1 : System.Web.UI.Page
+   {
+      protected void Page_Load(object sender, EventArgs e)
+      {
+
+      }
+
+      protected void lnkDoSearch_Click(object sender, EventArgs e)
+      {
          string searchString = txtSearch.Text;
 
          //Database db = Sitecore.Context.Database;
@@ -38,3 +64,6 @@
                phResults.Controls.Add(_div);
             }
          }
+      }
+   }
+}
